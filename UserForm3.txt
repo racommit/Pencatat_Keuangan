@@ -1,0 +1,15 @@
+Private Sub CommandButton1_Click()
+nilaikeluar = formKeluar.Value
+Unload Me
+nilaikeluarfinal = nilaikeluarfinal + nilaikeluar
+
+If Len(UserForm1.TextBox2.Text) = 0 Then
+    UserForm1.TextBox2.Text = nilaikeluar
+ElseIf Len(UserForm1.TextBox1.Text) <> 0 Then
+    UserForm1.TextBox2.Text = UserForm1.TextBox2.Text & "->" & nilaikeluar
+End If
+
+
+UserForm1.uangkeluar.Value = "Rp" & nilaikeluarfinal
+UserForm1.saldo.Value = "Rp" & nilaimasukfinal - nilaikeluarfinal
+End Sub

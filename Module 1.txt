@@ -1,0 +1,10 @@
+Public nilaimasuk As Long
+Public nilaimasukfinal As Long
+Public nilaikeluar As Long
+Public nilaikeluarfinal As Long
+Public saldofinal As Long
+
+
+Sub buka()
+UserForm1.Show
+End Sub

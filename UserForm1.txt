@@ -1,0 +1,32 @@
+Private Sub CommandButton1_Click()
+Pagepemasukan.Show
+End Sub
+
+Private Sub CommandButton2_Click()
+Pagepengeluaran.Show
+End Sub
+
+Private Sub CommandButton3_Click()
+    TextBox1.Value = 0
+    TextBox2.Value = 0
+    saldo.Value = 0
+    uangmasuk.Value = 0
+    uangkeluar.Value = 0
+    nilaimasukfinal = 0
+    nilaikeluarfinal = 0
+End Sub
+
+
+Private Sub UserForm_Initialize()
+    saldo = 0
+    nilaimasuk = 0
+    nilaikeluar = 0
+    TextBox1.Enabled = False
+    TextBox2.Enabled = False
+    saldo.Enabled = False
+    uangmasuk.Enabled = False
+    uangkeluar.Enabled = False
+    saldo.Value = nilaimasuk - nilaikeluar
+    uangmasuk.Value = nilaimasuk
+    uangkeluar.Value = nilaikeluar
+End Sub
